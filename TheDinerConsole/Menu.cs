@@ -14,5 +14,15 @@ namespace TheDinerConsole
             items = new List<MenuItem>();
         }
 
+        public void AddMenuItem(string Title, string Description, double Price)
+        {
+            MenuItem item = new MenuItem();
+            item.Title = Title;
+            item.Description = Description;
+            item.Price = Price;
+            items.Add(item);
+            
+        }
+
     }
 }
