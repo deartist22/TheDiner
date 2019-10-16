@@ -8,11 +8,19 @@ namespace TheDinerConsole
     {
         static void Main(string[] args)
         {
-            Menu summerMenu = new Menu();
+            FoodMenu summerMenu = new FoodMenu();
             summerMenu.Name = "Summer Menu";
 
             summerMenu.AddMenuItem("Salmon", "Fresh Norwegian Salmon", 25.50);
-            summerMenu.AddMenuItem("Taco", "Tacos from TX", 7);
+            summerMenu.AddMenuItem("Taco", "Tacos from TX", 7.00);
+            summerMenu.HospitalDirections = "18500 Katy Fwy, Houston, TX 77094";
+
+            DrinkMenu outsideDrinks = new DrinkMenu();
+            outsideDrinks.Disclaimer = "Do not drink and code";
+            outsideDrinks.AddMenuItem("Cuba Libre", "Classic", 10.00);
+            outsideDrinks.AddMenuItem("Screwdriver", "Hammered!!!", 15.00);
+
+            Order hungryGuestOrder = new Order();
 
             Console.WriteLine("Done");
         }
