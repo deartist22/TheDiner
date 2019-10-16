@@ -33,7 +33,17 @@ namespace TheDinerConsole
                 hungryGuestOrder.items.Add(currentItem);
             }
 
-            Console.WriteLine("The total is: {0}", hungryGuestOrder.Total);
+            try
+            {
+                outsideDrinks.AddMenuItem("Test", "Exception", 0);
+            }
+            catch(Exception throwException)
+            {
+                Console.WriteLine(throwException.Message);
+            }
+
+
+            //Console.WriteLine("The total is: {0}", hungryGuestOrder.Total);
             Console.ReadKey();
         }
     }
