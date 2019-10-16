@@ -22,7 +22,7 @@ namespace TheDinerConsole
 
             Order hungryGuestOrder = new Order();
 
-            for (int i = 0; i <= summerMenu.items.Count; i++)
+            for (int i = 0; i <= summerMenu.items.Count-1; i++)
             {
                 MenuItem currentItem = summerMenu.items[i];
                 hungryGuestOrder.items.Add(currentItem);
@@ -32,7 +32,9 @@ namespace TheDinerConsole
             {
                 hungryGuestOrder.items.Add(currentItem);
             }
-            Console.WriteLine("Done");
+
+            Console.WriteLine("The total is: {0}", hungryGuestOrder.Total);
+            Console.ReadKey();
         }
     }
 }
