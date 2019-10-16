@@ -22,6 +22,16 @@ namespace TheDinerConsole
 
             Order hungryGuestOrder = new Order();
 
+            for (int i = 0; i <= summerMenu.items.Count; i++)
+            {
+                MenuItem currentItem = summerMenu.items[i];
+                hungryGuestOrder.items.Add(currentItem);
+            }
+
+            foreach (MenuItem currentItem in outsideDrinks.items)
+            {
+                hungryGuestOrder.items.Add(currentItem);
+            }
             Console.WriteLine("Done");
         }
     }
